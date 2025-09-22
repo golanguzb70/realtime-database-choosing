@@ -1,0 +1,10 @@
+services:
+  redis-stack:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: redis-stack
+    entrypoint: ["/entrypoint.sh"]
+    ports:
+      - "6379:6379"
+      - "8001:8001"
