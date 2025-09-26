@@ -48,7 +48,7 @@ func ConcurrentUpdates() (int, int) {
 						operationCount++
 					}
 					if operationCount >= opsPerWorker {
-						time.Sleep(time.Until(startTime.Add(time.Minute)))
+						break
 					}
 				}
 

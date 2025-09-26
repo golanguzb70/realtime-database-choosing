@@ -19,8 +19,8 @@ var mu sync.Mutex
 
 const (
 	testCycleCount              = 1
-	writeGoroutinesCount        = 30
-	readGoroutinesCount         = 40
+	writeGoroutinesCount        = 20
+	readGoroutinesCount         = 25
 	numDrivers                  = 1_000_000
 	writeOpsPerMinute           = 1_000_000
 	singleGetOpsPerMinute       = 1_000_000
@@ -106,7 +106,7 @@ func main() {
 	fmt.Printf("Total Write Operations: %d\n", totalWriteOperations)
 	fmt.Printf("Total Write Operations per minute: %d\n", totalWriteOperations/testCycleCount)
 	fmt.Printf("Total Write Errors: %d\n", totalWriteErrors)
-	fmt.Println("|===== Summary of Read operations =====|")
+	fmt.Println("\n|===== Summary of Read operations =====|")
 	fmt.Printf("Total Read Operations: %d\n", totalReadOperations)
 	fmt.Printf("Total Read Operations per minute: %d\n", totalReadOperations/testCycleCount)
 	fmt.Printf("Total Read Errors: %d\n", totalReadErrors)
