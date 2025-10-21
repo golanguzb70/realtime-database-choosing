@@ -12,6 +12,7 @@ import (
 
 var ctx = context.Background()
 var rdb *redis.Client
+
 var lastDriverId int64 = 0
 var lastReadDriverId int64 = 0
 
@@ -31,7 +32,7 @@ const (
 func main() {
 	// Connect to Redis
 	rdb = redis.NewClient(&redis.Options{
-		Addr:     "localhost:6379",
+		Addr:     "localhost:6378",
 		Password: "",
 		DB:       0,
 	})

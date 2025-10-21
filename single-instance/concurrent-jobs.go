@@ -28,7 +28,7 @@ func ConcurrentUpdates() (int, int) {
 
 				// Run operations for 1 minute
 				startTime := time.Now()
-				opsPerWorker := (writeOpsPerMinute / writeGoroutinesCount) + writeOpsPerMinute%writeGoroutinesCount
+				// opsPerWorker := (writeOpsPerMinute / writeGoroutinesCount) + writeOpsPerMinute%writeGoroutinesCount
 				operationCount := 0
 				errorCount := 0
 
@@ -47,9 +47,9 @@ func ConcurrentUpdates() (int, int) {
 					} else {
 						operationCount++
 					}
-					if operationCount >= opsPerWorker {
-						break
-					}
+					// if operationCount >= opsPerWorker {
+					// 	break
+					// }
 				}
 
 				// Send statistics
