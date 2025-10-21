@@ -26,7 +26,7 @@ const (
 	writeGoroutinesCount        = 1
 	readGoroutinesCount         = 35
 	numDrivers                  = 1_000_000
-	writeOpsPerMinute           = 1000_000
+	writeOpsPerMinute           = 1_000_000
 	singleGetOpsPerMinute       = 1_000_000
 	multiGetRadOpsPerMinute     = 1_500_000
 	multiGetGeoHashOpsPerMinute = 500_000
